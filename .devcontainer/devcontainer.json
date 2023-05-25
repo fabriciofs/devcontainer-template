@@ -32,8 +32,10 @@
 						"path": "/bin/zsh"
 					}
 				},
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
 				"terminal.integrated.defaultProfile.linux": "zsh",
-				"editor.defaultFormatter": "esbenp.prettier-vscode",
 				"emmet.syntaxProfiles": {
 					"javascript": "jsx"
 				},
