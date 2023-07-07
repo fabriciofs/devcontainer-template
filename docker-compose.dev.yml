@@ -5,7 +5,28 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    env_file:
+      - .env      
     ports:
-      - "9000:9000"
+      - "3000:3000"
+    networks:
+      dev:         
     volumes:
       - .:/home/node/app
+
+  database:
+    image: postgres:13-alpine
+    command: [ "postgres", "-c", "log_statement=all" ]
+    ports:
+      - '5432:5432'
+    networks:
+      dev:      
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PWS}
+      POSTGRES_DB: ${DB_NAME}
+
+
+networks:
+  dev:
+    driver: bridge

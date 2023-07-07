@@ -24,7 +24,9 @@
 				"ms-azuretools.vscode-docker",
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
-				"chakrounanas.turbo-console-log"
+				"chakrounanas.turbo-console-log",
+				"nrwl.angular-console",
+				"firsttris.vscode-jest-runner"
 			],
 			"settings": {
 				"terminal.integrated.profiles.linux": {

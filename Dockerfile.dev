@@ -17,7 +17,9 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 
 USER root
 
-RUN chsh -s $(which zsh) node
+RUN chsh -s $(which zsh) node && \
+    npm i -g @nestjs/cli && \
+    npm install -g nx
 
 WORKDIR /home/node/app
 
